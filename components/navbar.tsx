@@ -11,7 +11,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
   const toggleMenu = (): void => {
-    console.log("toggle menu");
     setIsOpen(!isOpen);
   };
 
@@ -58,6 +57,7 @@ export default function Navbar() {
                     ? "text-rose-500"
                     : "text-gray-800 hover:text-opacity-80"
                 }`}
+                onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
@@ -76,6 +76,7 @@ export default function Navbar() {
                     ? "text-rose-500"
                     : "text-gray-800 hover:text-opacity-80"
                 }`}
+                onClick={() => setIsOpen(false)}
               >
                 Tentang Kami
               </Link>
@@ -116,6 +117,7 @@ export default function Navbar() {
                     ? "text-rose-500"
                     : "text-gray-800 hover:text-opacity-80"
                 }`}
+                onClick={() => setIsOpen(false)}
               >
                 Layanan
               </Link>
@@ -134,6 +136,7 @@ export default function Navbar() {
                     ? "text-rose-500"
                     : "text-gray-800 hover:text-opacity-80"
                 }`}
+                onClick={() => setIsOpen(false)}
               >
                 Kontak
               </Link>
