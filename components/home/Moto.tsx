@@ -1,3 +1,6 @@
+"use client";
+
+import useIntersectionObserver from "@/app/hooks/useIntersectionObserver";
 import { IoLibraryOutline, IoTelescopeOutline } from "react-icons/io5";
 import { VscFeedback } from "react-icons/vsc";
 
@@ -8,13 +11,14 @@ type MotoItem = {
 };
 
 const Moto = () => {
+  const { isVisible, elementRef } = useIntersectionObserver(0.1, true);
   const items: MotoItem[] = [
     {
       icon: <VscFeedback className="text-5xl" />,
       title: "Hearing",
       description: (
         <>
-          Kami mendengarkan masalah anda <br /> untuk menganalisa kebutuhan
+          Kami mendengarkan masalah anda untuk menganalisa kebutuhan
         </>
       ),
     },
@@ -23,7 +27,7 @@ const Moto = () => {
       title: "Analyze",
       description: (
         <>
-          Rumusan masalah dan solusi <br /> tepat penyelesaian
+          Rumusan masalah dan solusi dengan penyelesaian yang tepat
         </>
       ),
     },
@@ -32,7 +36,7 @@ const Moto = () => {
       title: "Build",
       description: (
         <>
-          Perencanaan, develop, testing dan deploy <br /> hingga app siap
+          Perencanaan, develop, testing dan deploy hingga app siap
           digunakan
         </>
       ),
@@ -40,7 +44,12 @@ const Moto = () => {
   ];
   return (
     <section className="flex justify-center" id="more">
-      <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-6 w-10/12 -mt-10 z-10">
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-3 sm:gap-6 w-10/12 -mt-10 z-10 transition-all duration-1000 ease-in-out delay-75 ${
+          isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
+        }`}
+        ref={elementRef}
+      >
         {items.map((item) => {
           const { icon, title, description } = item;
 
