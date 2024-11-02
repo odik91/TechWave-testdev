@@ -45,7 +45,7 @@ const Hero = () => {
             className="rounded-full bg-rose-500 hover:bg-rose-600 hover:shadow-md hover:shadow-gray-900 mb-7"
             variant="destructive"
           >
-            <Link href="#" className="tracking-widest uppercase font-light">
+            <Link href="#more" className="tracking-widest uppercase font-light">
               baca lagi
             </Link>
           </Button>
