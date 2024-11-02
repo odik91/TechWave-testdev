@@ -92,10 +92,8 @@ export default function Navbar() {
               style={{ width: "180px" }}
             />
             <li className={`text-white`}>
-              <h5 className="text-xl font-medium">TECHWARE</h5>
-              <div className="text-xs font-light">
-                Solusi untuk pengembangan aplikasi sesuai kebutuhan anda
-              </div>
+              <h5 className="text-xl font-medium"></h5>
+              <div className="text-xs font-light">&nbsp;</div>
             </li>
           </ul>
           <ul

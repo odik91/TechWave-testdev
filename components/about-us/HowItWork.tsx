@@ -53,7 +53,7 @@ const HowItWork = () => {
           <h4 className="uppercase">Cara kerja kami</h4>
         </div>
         <div
-          className={`grid grid-cols-1 lg:grid-cols-3 lg:gap-8 transition-all duration-1000 ease-in-out delay-75 ${
+          className={`grid grid-cols-1 lg:grid-cols-3 lg:gap-8 transition-all duration-1000 ease-in-out ${
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-[400px]"

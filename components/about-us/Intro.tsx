@@ -1,8 +1,7 @@
-
 import person01 from "@/public/images/people-01.jpg";
 import person02 from "@/public/images/people-02.jpg";
 import person03 from "@/public/images/people-03.png";
-import { IoApps } from "react-icons/io5";
+import SectionTitle from "../sectionTitle";
 
 const Intro = () => {
   return (
@@ -39,12 +38,7 @@ const Intro = () => {
           </div>
         </div>
         <div className="p-6">
-          <div className="flex justify-start items-center gap-2 mt-6 text-base text-rose-400 font-bold mb-3">
-            <div className="text-lg">
-              <IoApps />
-            </div>
-            <h4 className="uppercase">tentang kami</h4>
-          </div>
+          <SectionTitle title="Tentang kami" />
           <h2 className="text-3xl font-semibold tracking-wide text-gray-800 mb-6">
             Perkenalan singkat techwave team
           </h2>

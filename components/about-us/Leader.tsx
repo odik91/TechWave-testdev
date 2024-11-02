@@ -1,7 +1,7 @@
 import leader01 from '@/public/images/leader-01.jpg';
 import leader02 from '@/public/images/leader-02.png';
 import leader03 from '@/public/images/leader-03.jpg';
-import { IoApps } from "react-icons/io5";
+import SectionTitle from '../sectionTitle';
 
 type Leaders = {
   image: string;
@@ -29,12 +29,7 @@ const Leader = () => {
   ];
   return (
     <>
-      <div className="flex justify-center items-center gap-2 mt-10 text-base text-rose-400 font-bold">
-        <div className="text-lg">
-          <IoApps />
-        </div>
-        <h4 className="uppercase">Direksi</h4>
-      </div>
+      <SectionTitle title="Direksi" />
       <div className="flex justify-center items-center mb-6">
         <div className="container p-6">
           <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 p-2">
