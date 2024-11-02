@@ -1,20 +1,13 @@
-"use client";
-import useIntersectionObserver from "@/app/hooks/useIntersectionObserver";
+
 import person01 from "@/public/images/people-01.jpg";
 import person02 from "@/public/images/people-02.jpg";
 import person03 from "@/public/images/people-03.png";
 import { IoApps } from "react-icons/io5";
 
 const Intro = () => {
-  const { isVisible, elementRef } = useIntersectionObserver(0.1, true);
   return (
     <div
-      className={`flex justify-center items-center my-6 transition-all duration-1000 ease-in-out delay-75 ${
-        isVisible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-[400px]"
-      }`}
-      ref={elementRef}
+      className={`flex justify-center items-center my-6 transition-all duration-1000 ease-in-out delay-75`}
     >
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-6 w-10/12">
         <div>

@@ -1,7 +1,9 @@
+"use client";
 import { IoApps } from "react-icons/io5";
 import meet from "@/public/images/meet.svg";
 import app_build from "@/public/images/app-build.svg";
 import publish from "@/public/images/publish.svg";
+import useIntersectionObserver from "@/app/hooks/useIntersectionObserver";
 
 type WorkType = {
   id: number;
@@ -11,6 +13,7 @@ type WorkType = {
 };
 
 const HowItWork = () => {
+  const { isVisible, elementRef } = useIntersectionObserver();
   const works: WorkType[] = [
     {
       id: 1,
@@ -49,7 +52,14 @@ const HowItWork = () => {
           </div>
           <h4 className="uppercase">Cara kerja kami</h4>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
+        <div
+          className={`grid grid-cols-1 lg:grid-cols-3 lg:gap-8 transition-all duration-1000 ease-in-out delay-75 ${
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[400px]"
+          }`}
+          ref={elementRef}
+        >
           {works.map((work, index) => (
             <div
               key={index}
