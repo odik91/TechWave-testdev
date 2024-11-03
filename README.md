@@ -51,3 +51,6 @@ dan untuk build app ini jalankan command berikut:
 npm run build
 # hasil build next js terdapat pada folder .next
 ```
+## Link demo
+https://tech-wave-testdev.vercel.app/
+untuk sementara mengunakan vercel, karena untuk netlify proses cache cdn terlalu lama
