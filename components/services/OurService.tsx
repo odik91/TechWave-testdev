@@ -40,12 +40,13 @@ const OurService = () => {
         <div className="container p-6 w-10/12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <SingleService
-                key={index}
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-              />
+              <div key={index}>
+                <SingleService
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                />
+              </div>
             ))}
           </div>
         </div>

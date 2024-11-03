@@ -39,6 +39,7 @@ const Intro = () => {
         </div>
         <div className="p-6">
           <SectionTitle title="Tentang kami" />
+          <br />
           <h2 className="text-3xl font-semibold tracking-wide text-gray-800 mb-6">
             Perkenalan singkat techwave team
           </h2>

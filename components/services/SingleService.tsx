@@ -1,11 +1,8 @@
 import { ServiceType } from "./OurService";
 
-type PropsData = ServiceType & { key: number };
-
-const SingleService = ({ key, icon, title, description }: PropsData) => {
+const SingleService = ({icon, title, description }: ServiceType) => {
   return (
     <div
-      key={key}
       className="border bg-slate-200 shadow-lg rounded-xl p-6 hover:shadow-2xl hover:bg-slate-100"
     >
       <div className="text-violet-600 text-7xl mb-3">{icon}</div>
