@@ -53,4 +53,5 @@ npm run build
 ```
 ## Link demo
 https://tech-wave-testdev.vercel.app/
-untuk sementara mengunakan vercel, karena untuk netlify proses cache cdn terlalu lama
+atau
+https://techwave-exam.netlify.app/
