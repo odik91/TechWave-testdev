@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Ini merupakan project yang dibangun menggunakan [Next.js](https://nextjs.org) dan TypeScript
 
-## Getting Started
+Project merupakan web company profile diperuntukkan untuk test di perusahaan Inovasi Karya Batam
 
-First, run the development server:
+### Intro project
+Project ini merupakan website company profile yang berjudul <b>TechWave</b>. Dalam web ini terdapat empat halaman yaitu Home, Tentang Kami, Layanan dan Kontak.
+Web ini menjelaskan tentang perusahaan yang bergerak dalam bidang teknologi informasi dengan beberapa layanyan yang tersedia seperti pembuatan applikasi dan layanan cloud.
 
+### Package
+* tailwindcss
+* shadcn ui
+* react-icons
+* sweetalert2
+* mjml
+* nodemailer
+* zod
+
+## Persiapan
+Untuk clone project ini dapat dilakukan dengan menggunakan CLI atau langsung download zip melalui tombol <b>Code</b> - <b>Download zip</b>
+
+Sebelum menjalankan aplikasi pastikan Node Package Manager telah terinstall. Berikut cara untuk menginstall NPM pada project:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install --legacy-peer-deps
+# kemudian lanjutkan dengan
+npm audit fix --legacy-peer-deps
+# --legacy-peer-deps diperlukan karena pada project ini menggunakan 
+# Nextjs dan reactjs terbaru, sehingga ada beberapa NPM package yang belum terupdate
+# seperti shadcn ui, mjml, sweetalert2, dan lainnya
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## .env
+Pada projek Next js ini membutuhkan file env untuk keperluan mengirim email dimana email ini hanyalah email testing yang akan diterima oleh mailtrap.io. Berikut env variabelnya:
+```bash
+MAIL_USER=[isi dengan user mailtrap]
+MAIL_PASSWORD=[isi dengan mailtrap password]
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_DONT_REPLY=noreply@company.com
+MAIL_TO=hr@company.com
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Menjalankan Project
+Untuk menjalankan projek ini jalankan command berikut:
+```bash
+npm run dev
+# pada umumnya aplikasi akan berjalan di port 3000
+# http://localhost:3000
+```
+dan untuk build app ini jalankan command berikut:
+```bash
+npm run build
+# hasil build next js terdapat pada folder .next
+```
