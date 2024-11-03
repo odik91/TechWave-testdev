@@ -70,3 +70,47 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.fancy-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 8rem;
+
+  div {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+
+    &.ring {
+      border-width: 0.5rem;
+      border-style: solid;
+      border-color: transparent;
+      animation: 2s fancy infinite alternate;
+
+      &:nth-child(1) {
+        border-left-color: #5666cf;
+        border-right-color: #5666cf;
+      }
+      &:nth-child(2) {
+        border-top-color: #713fe7;
+        border-bottom-color: #713fe7;
+        animation-delay: 1s;
+      }
+    }
+
+    &.dot {
+      width: 2rem;
+      height: 2rem;
+      background: #7e0db3;
+    }
+  }
+}
+
+@keyframes fancy {
+  to {
+    transform: rotate(360deg) scale(0.5);
+  }
+}
