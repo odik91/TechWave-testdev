@@ -1,7 +1,7 @@
-import leader01 from '@/public/images/leader-01.jpg';
-import leader02 from '@/public/images/leader-02.png';
-import leader03 from '@/public/images/leader-03.jpg';
-import SectionTitle from '../sectionTitle';
+import leader01 from "@/public/images/leader-01.jpg";
+import leader02 from "@/public/images/leader-02.png";
+import leader03 from "@/public/images/leader-03.jpg";
+import SectionTitle from "../sectionTitle";
 
 type Leaders = {
   image: string;

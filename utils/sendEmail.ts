@@ -33,7 +33,7 @@ const sendEmail = async ({
   subject,
   name,
   message,
-  email
+  email,
 }: SendMailOptions) => {
   const transporter = generateTransporter();
 

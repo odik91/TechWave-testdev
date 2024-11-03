@@ -7,7 +7,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { z } from "zod";
 import InputErrorMessage from "../inputErrorMessage";
 import InputContact from "./InputContact";
-import Swal from "sweetalert2"
+import Swal from "sweetalert2";
 
 type FormErrors = Partial<
   Record<keyof z.infer<typeof messageSchema>, string[]>
@@ -78,13 +78,13 @@ const DetailForm = () => {
           Swal.fire({
             title: "Berhasil",
             text: "Pesan telah dikirim",
-            icon: "success"
+            icon: "success",
           });
         } else {
           Swal.fire({
             title: "Gagal",
             text: "Pesan gagal dikirim!",
-            icon: "error"
+            icon: "error",
           });
         }
       } catch (error) {
@@ -100,9 +100,13 @@ const DetailForm = () => {
       {isLoading && (
         <>
           <div className="fixed w-full h-full top-0 left-0">
-            <div className="absolute w-full h-full top-0 left-0 z-10" style={{
-              background: "radial-gradient(circle, rgba(2, 0, 36, 0.404) 0%, rgba(52,9,121,0.551708055579144) 35%, rgba(81,43,106,1) 100%)",
-            }}></div>
+            <div
+              className="absolute w-full h-full top-0 left-0 z-10"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(2, 0, 36, 0.404) 0%, rgba(52,9,121,0.551708055579144) 35%, rgba(81,43,106,1) 100%)",
+              }}
+            ></div>
             <div className="absolute w-full h-full top-0 left-0 z-20">
               <div className="flex flex-col justify-center items-center w-full h-full">
                 <div className="fancy-spinner">
@@ -110,7 +114,9 @@ const DetailForm = () => {
                   <div className="ring"></div>
                   <div className="dot"></div>
                 </div>
-                <h1 className="text-2xl font-semibold text-white">Loading...</h1>
+                <h1 className="text-2xl font-semibold text-white">
+                  Loading...
+                </h1>
               </div>
             </div>
           </div>

@@ -28,7 +28,9 @@ const GlobalHero = ({ link, linkName, current }: AboutProps) => {
         style={{ backdropFilter: "blur(4px)" }}
         ref={elementRef}
       >
-        <h1 className="text-5xl font-semibold tracking-wider capitalize">{current}</h1>
+        <h1 className="text-5xl font-semibold tracking-wider capitalize">
+          {current}
+        </h1>
         <div className="mt-6 flex justify-center items-center text-base">
           <Link href={link}>{linkName}</Link> <IoChevronForward />{" "}
           <span className="capitalize">{current}</span>

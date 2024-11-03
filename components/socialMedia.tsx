@@ -40,7 +40,10 @@ const SocialMedia = () => {
       {socialMediaItems.map((socialMedia) => {
         const { name, link, icon } = socialMedia;
         return (
-          <li key={name} className="list-item box-border border-2 p-3 rounded-full hover:bg-white hover:text-purple-500">
+          <li
+            key={name}
+            className="list-item box-border border-2 p-3 rounded-full hover:bg-white hover:text-purple-500"
+          >
             <Link href={link} className="font-light text-[24px]">
               {icon}
             </Link>

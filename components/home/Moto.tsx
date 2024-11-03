@@ -17,28 +17,21 @@ const Moto = () => {
       icon: <VscFeedback className="text-5xl" />,
       title: "Hearing",
       description: (
-        <>
-          Kami mendengarkan masalah anda untuk menganalisa kebutuhan
-        </>
+        <>Kami mendengarkan masalah anda untuk menganalisa kebutuhan</>
       ),
     },
     {
       icon: <IoTelescopeOutline className="text-5xl" />,
       title: "Analyze",
       description: (
-        <>
-          Rumusan masalah dan solusi dengan penyelesaian yang tepat
-        </>
+        <>Rumusan masalah dan solusi dengan penyelesaian yang tepat</>
       ),
     },
     {
       icon: <IoLibraryOutline className="text-5xl" />,
       title: "Build",
       description: (
-        <>
-          Perencanaan, develop, testing dan deploy hingga app siap
-          digunakan
-        </>
+        <>Perencanaan, develop, testing dan deploy hingga app siap digunakan</>
       ),
     },
   ];
